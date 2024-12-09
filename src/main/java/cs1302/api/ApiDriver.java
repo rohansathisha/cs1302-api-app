@@ -13,8 +13,10 @@ public class ApiDriver {
      */
     public static void main(String[] args) {
         try {
+            // Launch the JavaFX application
             Application.launch(ApiApp.class, args);
         } catch (UnsupportedOperationException e) {
+            // Handle DISPLAY errors
             e.printStackTrace();
             System.err.println();
             System.err.println(e);
@@ -23,6 +25,7 @@ public class ApiDriver {
             System.err.println("out and logging back in.");
             System.exit(1);
         } catch (RuntimeException re) {
+            // Handle any runtime exception in the app
             re.printStackTrace();
             System.err.println();
             System.err.println(re);
