@@ -51,9 +51,9 @@ public class ApiApp extends Application {
             }
             try {
                 // Fetch Coordinates
-                GeocodingAPI.GeocodingResponse[] geoResponses = GeocodingAPI.getCoordinates(city);
-                String latitude = geoResponses[0].latitude;
-                String longitude = geoResponses[0].longitude;
+                GeocodingAPI.GeocodingResponse[] coordinates = GeocodingAPI.getCoordinates(city);
+                String latitude = coordinates[0].latitude;
+                String longitude = coordinates[0].longitude;
                 // Fetch Weather Data
                 WeatherAPI.WeatherResponse weatherResponse =
                         WeatherAPI.getWeather(latitude, longitude);
